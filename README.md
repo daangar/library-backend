@@ -6,6 +6,7 @@ API REST en Django para gestionar operaciones de biblioteca incluyendo libros, u
 
 - Python 3.8+
 - pip
+- PostgreSQL 12+
 - Entorno virtual (recomendado)
 
 ## Configuración Rápida
@@ -24,15 +25,24 @@ API REST en Django para gestionar operaciones de biblioteca incluyendo libros, u
 
 3. **Instalar dependencias**
    ```bash
-   pip install django djangorestframework djangorestframework-simplejwt django-filter drf-yasg
+   pip install -r requirements.txt
    ```
 
-4. **Configurar base de datos**
+4. **Configurar PostgreSQL**
+   
+   Crear base de datos y usuario:
+   ```sql
+   CREATE DATABASE librarydb;
+   CREATE USER libraryuser WITH PASSWORD 'L1br@ry!!';
+   GRANT ALL PRIVILEGES ON DATABASE librarydb TO libraryuser;
+   ```
+
+5. **Aplicar migraciones**
    ```bash
    python manage.py migrate
    ```
 
-5. **Ejecutar servidor de desarrollo**
+6. **Ejecutar servidor de desarrollo**
    ```bash
    python manage.py runserver
    ```
