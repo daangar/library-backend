@@ -50,6 +50,12 @@ SECURE_HSTS_PRELOAD = True
 
 # CORS settings for API
 CORS_ALLOW_ALL_ORIGINS = False
+CORS_ALLOW_HEADERS = [
+    'accept',
+    'authorization', 
+    'content-type',
+    'origin',
+]
 CORS_ALLOWED_ORIGINS = [
     "https://library-api.onrender.com",
 ]
