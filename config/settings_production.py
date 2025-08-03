@@ -30,6 +30,7 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Add WhiteNoise to middleware
 MIDDLEWARE = [
+    "corsheaders.middleware.CorsMiddleware",
     "django.middleware.security.SecurityMiddleware",
     "whitenoise.middleware.WhiteNoiseMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
@@ -50,6 +51,7 @@ SECURE_HSTS_PRELOAD = True
 
 # CORS settings for API
 CORS_ALLOW_ALL_ORIGINS = False
+CORS_ALLOW_CREDENTIALS = False
 CORS_ALLOW_HEADERS = [
     'accept',
     'authorization', 
@@ -57,5 +59,6 @@ CORS_ALLOW_HEADERS = [
     'origin',
 ]
 CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000",
     "https://library-api.onrender.com",
 ]
