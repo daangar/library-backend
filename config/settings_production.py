@@ -60,5 +60,5 @@ CORS_ALLOW_HEADERS = [
 ]
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
-    "https://library-api.onrender.com",
+    "https://library-frontend-5sh9.onrender.com/",
 ]
